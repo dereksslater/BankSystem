@@ -1,13 +1,17 @@
 package model;
 //Proximas atualizacoes....
+
 public class ContaBanco {
 
     private String Titular;
     private double Saldo;
+    private int NumeroConta;
 
-    public ContaBanco(String Titular, double Saldo) {
+    public ContaBanco(int NumeroConta, String Titular, double Saldo) {
         this.Titular = Titular;
         this.Saldo = Saldo;
+        this.NumeroConta = NumeroConta;
+
     }
 
     public void depositar(double valor) {
@@ -34,6 +38,7 @@ public class ContaBanco {
         System.out.println("\n===== DADOS DA CONTA =====");
         System.out.println("Titular: " + Titular);
         System.out.println("Saldo: " + Saldo);
+        System.out.println("Número da conta: " + NumeroConta);
         System.out.println("==========================\n");
     }
 
@@ -51,5 +56,19 @@ public class ContaBanco {
 
     public void setSaldo(double Saldo) {
         this.Saldo = Saldo;
+    }
+
+    public int getNumeroConta() {
+        return NumeroConta;
+
+    }
+
+    public void setNumeroConta(int NumeroConta) {
+        this.NumeroConta = NumeroConta;
+
+    }
+
+    public void MostrarConta() {
+        System.out.println("Número da conta é:" + NumeroConta);
     }
 }

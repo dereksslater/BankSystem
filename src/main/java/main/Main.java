@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ContaBanco pessoa1 = new ContaBanco("Derek", 400);
+        ContaBanco pessoa1 = new ContaBanco(123,"Derek", 400);
 
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.US);
@@ -16,6 +16,7 @@ public class Main {
         while (true) {
 
             System.out.println("\nDigite o número da opção abaixo");
+
             System.out.println("1 - Depositar");
             System.out.println("2 - Sacar");
             System.out.println("3 - Mostrar dados");
@@ -25,8 +26,8 @@ public class Main {
 
             if (opcao == 1) {
                 System.out.println("Qual valor quer depositar?");
-                double valor = sc.nextDouble();
-                pessoa1.depositar(valor);
+                double valor1 = sc.nextDouble();
+                pessoa1.depositar(valor1);
 
             } else if (opcao == 2) {
                 System.out.println("Qual valor quer sacar?");
